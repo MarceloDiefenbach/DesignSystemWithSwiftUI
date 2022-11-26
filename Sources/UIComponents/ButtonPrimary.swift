@@ -21,7 +21,7 @@ public struct ButtonPrimary: View {
     let labelSize: CGFloat = FontSize.small.value
     
     //MARK: - init
-    init(label: String, active: Bool = true, focused: Bool = false, circular: Bool = false, action: @escaping () -> Void) {
+    public init(label: String, active: Bool = true, focused: Bool = false, circular: Bool = false, action: @escaping () -> Void) {
         self.label = label
         self.active = active
         self.focused = focused
