@@ -2,12 +2,12 @@
 //  SwiftUIView.swift
 //  
 //
-//  Created by Marcelo Diefenbach on 23/11/22.
+//  Created by Marcelo Diefenbach on 26/11/22.
 //
 
 import SwiftUI
 
-public struct ButtonPrimary: View {
+struct ButtonSecondary: View {
     
     @State var label: String
     @State var active: Bool
@@ -36,11 +36,11 @@ public struct ButtonPrimary: View {
                 Text(label)
                     .font(.system(size: labelSize, weight: .regular))
                     .padding(.vertical, Spacing.xxxs.value)
-                    .foregroundColor(active ? .white : .white.opacity(0.6))
+                    .foregroundColor(active ? .black : .white.opacity(0.6))
                     .multilineTextAlignment(.center)
                 Spacer()
             }
-            .background(active ? Color.red : Color.gray)
+            .background(active ? Color.clear : Color.gray)
             .cornerRadius(circular ? cornerCircular : cornerXS)
             .overlay(
                 RoundedRectangle(cornerRadius: circular ? cornerCircular : cornerXS)
@@ -53,8 +53,8 @@ public struct ButtonPrimary: View {
     }
 }
 
-struct FirstComponent_Previews: PreviewProvider {
+struct ButtonSecondary_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonPrimary(label: "Label text", action: {})
+        ButtonSecondary(label: "Label text", action: {})
     }
 }
