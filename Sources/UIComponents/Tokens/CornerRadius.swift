@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CornerRadius: String {
+public enum CornerRadius: String {
     
     /// 0
     case none

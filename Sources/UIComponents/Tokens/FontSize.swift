@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FontSize: String {
+public enum FontSize: String {
     /// 12
     case xxs
     /// 16

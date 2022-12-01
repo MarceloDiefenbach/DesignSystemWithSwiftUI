@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Spacing: String {
+public enum Spacing: String {
     /// 8
     case quarck
     /// 16

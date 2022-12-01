@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ButtonSecondary: View {
+public struct ButtonSecondary: View {
     
     @State var label: String
     @State var active: Bool
