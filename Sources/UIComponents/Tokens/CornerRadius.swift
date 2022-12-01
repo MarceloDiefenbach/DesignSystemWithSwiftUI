@@ -18,7 +18,7 @@ public enum CornerRadius: String {
     /// 500
     case circular
     
-    var value: CGFloat {
+    public var value: CGFloat {
         switch self {
         case .none:
             return 0

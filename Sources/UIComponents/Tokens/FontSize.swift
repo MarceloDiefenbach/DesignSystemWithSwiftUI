@@ -23,7 +23,7 @@ public enum FontSize: String {
     /// 60
     case extraExtraLarge
     
-    var value: CGFloat {
+    public var value: CGFloat {
         switch self {
         case .xxs:
             return 12

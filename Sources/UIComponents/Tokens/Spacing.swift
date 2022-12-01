@@ -27,7 +27,7 @@ public enum Spacing: String {
     /// 58
     case large
     
-    var value: CGFloat {
+    public var value: CGFloat {
         switch self {
         case .quarck:
             return 4
