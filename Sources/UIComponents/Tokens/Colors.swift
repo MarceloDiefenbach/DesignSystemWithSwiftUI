@@ -14,7 +14,7 @@ public enum AppColors {
     case neutralLightPure
     case neutralDarkPure
     
-    var color: Color {
+    public var color: Color {
         switch self {
         case .brandPrimary:
             return Color(red: 0.08627451211214066, green: 0.13333334028720856, blue: 0.545098066329956, opacity: 1)

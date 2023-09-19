@@ -16,7 +16,7 @@ public enum AppFonts {
     case smallRegular
     case smallBold
     
-    var font: Font {
+    public var font: Font {
         switch self {
         case .largeTitle:
             return Font.system(size: 34, weight: .bold, design: .default)
