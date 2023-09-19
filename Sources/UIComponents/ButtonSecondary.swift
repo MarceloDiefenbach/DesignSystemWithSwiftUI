@@ -18,7 +18,8 @@ public struct ButtonSecondary: View {
     //MARK: - styles
     let cornerXS: CGFloat = CornerRadius.xs.value
     let cornerCircular: CGFloat = CornerRadius.circular.value
-    let fontStyle: Font = AppFonts.normalRegular.font
+    let fontStyle: Font = AppFonts.normalBold.font
+    let buttonColor: Color = AppColors.brandSecondary.color
     
     //MARK: - init
     public init(label: String, active: Bool = true, focused: Bool = false, circular: Bool = false, action: @escaping () -> Void) {
@@ -36,11 +37,11 @@ public struct ButtonSecondary: View {
                 Text(label)
                     .font(fontStyle)
                     .padding(.vertical, Spacing.xxxs.value)
-                    .foregroundColor(active ? .black : .white.opacity(0.6))
+                    .foregroundColor(active ? .white : .white.opacity(0.6))
                     .multilineTextAlignment(.center)
                 Spacer()
             }
-            .background(active ? Color.clear : Color.gray)
+            .background(active ? buttonColor : Color.gray)
             .cornerRadius(circular ? cornerCircular : cornerXS)
             .overlay(
                 RoundedRectangle(cornerRadius: circular ? cornerCircular : cornerXS)
