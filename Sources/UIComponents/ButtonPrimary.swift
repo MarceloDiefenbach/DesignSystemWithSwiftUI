@@ -18,7 +18,7 @@ public struct ButtonPrimary: View {
     //MARK: - styles
     let cornerXS: CGFloat = CornerRadius.xs.value
     let cornerCircular: CGFloat = CornerRadius.circular.value
-    let labelSize: CGFloat = FontSize.small.value
+    let fontStyle: Font = Font.DesignSystem.normalRegular
     
     //MARK: - init
     public init(label: String, active: Bool = true, focused: Bool = false, circular: Bool = false, action: @escaping () -> Void) {
@@ -34,7 +34,7 @@ public struct ButtonPrimary: View {
             HStack {
                 Spacer()
                 Text(label)
-                    .font(.system(size: labelSize, weight: .regular))
+                    .font(fontStyle)
                     .padding(.vertical, Spacing.xxxs.value)
                     .foregroundColor(active ? .white : .white.opacity(0.6))
                     .multilineTextAlignment(.center)
