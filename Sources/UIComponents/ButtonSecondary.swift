@@ -18,7 +18,7 @@ public struct ButtonSecondary: View {
     //MARK: - styles
     let cornerXS: CGFloat = CornerRadius.xs.value
     let cornerCircular: CGFloat = CornerRadius.circular.value
-    let fontStyle: Font = Font.DesignSystem.normalRegular
+    let fontStyle: Font = AppFonts.normalRegular.font
     
     //MARK: - init
     public init(label: String, active: Bool = true, focused: Bool = false, circular: Bool = false, action: @escaping () -> Void) {
