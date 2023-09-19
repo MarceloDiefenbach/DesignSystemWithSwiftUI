@@ -15,7 +15,7 @@ public extension Font {
     ///
     /// Xcode's autocomplete allows for easy discovery of design system fonts.
     /// At any call site that requires a font, type `Font.DesignSystem.<esc>`
-    struct DesignSystem {
+    public struct DesignSystem {
         public static let largeTitle = Font.system(size: 34, weight: .bold, design: .default)
         public static let mediumBold = Font.system(size: 24, weight: .light, design: .default)
         public static let normalBold = Font.system(size: 16, weight: .bold, design: .default)
