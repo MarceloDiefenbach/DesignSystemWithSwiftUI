@@ -11,7 +11,6 @@ public struct ButtonPrimary: View {
     
     @State var label: String
     @State var active: Bool
-    @State var focused: Bool
     @State var circular: Bool
     var action: () -> Void
     
@@ -22,10 +21,9 @@ public struct ButtonPrimary: View {
     let buttonColor: Color = AppColors.brandPrimary.color
     
     //MARK: - init
-    public init(label: String, active: Bool = false, focused: Bool = false, circular: Bool = false, action: @escaping () -> Void) {
+    public init(label: String, active: Bool = true, circular: Bool = false, action: @escaping () -> Void) {
         self.label = label
         self.active = active
-        self.focused = focused
         self.circular = circular
         self.action = action
     }
@@ -43,10 +41,6 @@ public struct ButtonPrimary: View {
             }
             .background(active ? buttonColor : Color.gray)
             .cornerRadius(circular ? cornerCircular : cornerXS)
-            .overlay(
-                RoundedRectangle(cornerRadius: circular ? cornerCircular : cornerXS)
-                        .stroke(focused ? .blue : .clear, lineWidth: focused ? 2 : 0)
-                )
             .onTapGesture {
                 action()
             }
